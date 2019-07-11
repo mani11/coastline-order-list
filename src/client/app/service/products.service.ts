@@ -24,7 +24,7 @@ export class ProductsService {
       this._getProductList.next(response);
     });
   }
-  getSelectedProducts(){
+  getSelectedProducts() {
     return this.appState.getFromLocalStorage();
   }
   placeOrder(url: string, body: any) {

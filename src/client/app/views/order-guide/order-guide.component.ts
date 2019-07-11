@@ -14,37 +14,37 @@ export class OrderGuideComponent implements OnInit {
   public isVisible = "hide";
   constructor(private modalService: NgbModal,
     private productService: ProductsService
-    ) { }
-   
+  ) { }
+
   ngOnInit() {
     this.selectedProducts = this.productService.getSelectedProducts();
     this.getSelectedProduct();
   }
-  openEditGuide(){
+  openEditGuide() {
     this.modalService.open(EditOrderGuideComponent);
   }
-  getSelectedProduct(){
+  getSelectedProduct() {
     this.productService.selectedProducts$
-    .subscribe(res => {
-      if(res != null){
-        this.selectedProducts = res;
-      }
-    })
+      .subscribe(res => {
+        if (res != null) {
+          this.selectedProducts = res;
+        }
+      })
   }
-  decrementQuantity(product:any){
-    product.minQuantity = product.minQuantity == 0?0: product.minQuantity-product.boxSize;
+  decrementQuantity(product: any) {
+    product.minQuantity = product.minQuantity == 0 ? 0 : product.minQuantity - product.boxSize;
     product.orderQuantity = product.minQuantity;
     this.productService.updateOrderQuantity(product)
   }
-  incrementQuantity(product:any){
+  incrementQuantity(product: any) {
     product.minQuantity = product.minQuantity + product.boxSize;
     product.orderQuantity = product.minQuantity;
     this.productService.updateOrderQuantity(product)
   }
 
-  placeOrder(){
+  placeOrder() {
     var products = this.productService.getSelectedProducts();
-    this.productService.placeOrder('products',products);
+    this.productService.placeOrder('products', products);
     this.isVisible = "show";
 
   }

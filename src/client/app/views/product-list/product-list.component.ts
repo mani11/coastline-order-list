@@ -10,10 +10,10 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products : ProductModel[];
+  products: ProductModel[];
   selectedProducts = [];
-  constructor(private productService : ProductsService,
-    private modalService:NgbActiveModal) { }
+  constructor(private productService: ProductsService,
+    private modalService: NgbActiveModal) { }
   // products = [
   //   {
   //     "_id": "5d124e32fb6fc00e79b02794",
@@ -142,20 +142,20 @@ export class ProductListComponent implements OnInit {
   // ]
   ngOnInit() {
     this.productService.productList$
-    .subscribe(results => {
-      this.products = results.body;
-    })
+      .subscribe(results => {
+        this.products = results.body;
+      })
   }
-  generateOrderList(){
+  generateOrderList() {
     this.selectedProducts = this.products
-    .filter((product) => 
-    { if(product['selected'] === true)
-      return product;
-  });
+      .filter((product) => {
+        if (product['selected'] === true)
+          return product;
+      });
     this.productService.setOrderGuideToLocalStorage(this.selectedProducts);
     this.closeModal();
   }
-  closeModal(){
+  closeModal() {
     this.modalService.close();
   }
 

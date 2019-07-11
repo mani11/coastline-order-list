@@ -5,27 +5,27 @@ import { AppStateService } from '../service/app-state.service'
   name: 'productList'
 })
 export class ProductListPipe implements PipeTransform {
-  
-  constructor(private appState : AppStateService){}
+
+  constructor(private appState: AppStateService) { }
 
   transform(values: any[], ...args: any[]): any {
     debugger;
-    
+
     var itemsInLocalStorage = this.appState.getFromLocalStorage()
-    if(!values){
+    if (!values) {
       return [];
     }
-    else{
+    else {
       var uniqueResultOne = values.filter(obj => {
         return !itemsInLocalStorage.some(obj2 => {
-            return obj['_id'] == obj2['_id'];
+          return obj['_id'] == obj2['_id'];
         });
-    });
+      });
 
-    return uniqueResultOne;
+      return uniqueResultOne;
+    }
+
   }
- 
-  }
-    
-  }
+
+}
 

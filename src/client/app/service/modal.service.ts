@@ -8,7 +8,7 @@ export class ModalService {
 
   constructor(private modalService: NgbModal) { }
 
-  openModal(component:any){
+  openModal(component: any) {
     this.modalService.open(component);
 
   }

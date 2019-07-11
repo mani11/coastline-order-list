@@ -1,24 +1,24 @@
-  <div class="modal-body">
-      <table class="table table-striped">
-          <thead>
-          <tr>
-            <th scope="col">Add</th>
-            <th scope="col">Product</th>
-            <th scope="col">Unit Price</th>
-            <th scope="col">Box Size</th>
-          </tr>
-          </thead>
-          <tbody>
-         <tr *ngFor="let product of products | productList">
-           <td><input type="checkbox" value="selected" [(ngModel)]="product.selected"></td>
-            <td>{{ product.name }}</td>
-            <td>{{ product.sellingPrice | currency }}</td>
-            <td>{{ product.boxSize }}</td>
-          </tr>
-          </tbody>
-        </table>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="closeModal()">Close</button>
-    <button class="btn btn-primary" (click)="generateOrderList()">Submit</button>
-  </div>
+<div class="modal-body">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Add</th>
+        <th scope="col">Product</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Box Size</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products | productList">
+        <td><input type="checkbox" value="selected" [(ngModel)]="product.selected"></td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.sellingPrice | currency }}</td>
+        <td>{{ product.boxSize }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="closeModal()">Close</button>
+  <button class="btn btn-primary" (click)="generateOrderList()">Submit</button>
+</div>

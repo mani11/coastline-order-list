@@ -7,13 +7,13 @@ export class AppStateService {
 
   constructor() { }
 
-  setToLocalStorage(selectedProducts:any){
-    localStorage.setItem('selectedProducts',JSON.stringify(selectedProducts));
+  setToLocalStorage(selectedProducts: any) {
+    localStorage.setItem('selectedProducts', JSON.stringify(selectedProducts));
   }
-  getFromLocalStorage(){
+  getFromLocalStorage() {
     var items = JSON.parse(localStorage.getItem('selectedProducts'));
-    return items==null?[]:items;
+    return items == null ? [] : items;
   }
 
- 
+
 }

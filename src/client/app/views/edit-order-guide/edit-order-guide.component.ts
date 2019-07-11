@@ -42,12 +42,12 @@ export class EditOrderGuideComponent implements OnInit {
         }
       })
   };
-  decrementQuantity(product:any){
-    product.minQuantity = product.minQuantity == 0?0: product.minQuantity-product.boxSize;
+  decrementQuantity(product: any) {
+    product.minQuantity = product.minQuantity == 0 ? 0 : product.minQuantity - product.boxSize;
     product.orderQuantity = product.minQuantity;
     this.productService.updateOrderQuantity(product)
   }
-  incrementQuantity(product:any){
+  incrementQuantity(product: any) {
     product.minQuantity = product.minQuantity + product.boxSize;
     product.orderQuantity = product.minQuantity;
     this.productService.updateOrderQuantity(product)

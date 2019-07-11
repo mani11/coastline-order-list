@@ -1,31 +1,31 @@
 <ng-container *ngIf="selectedProducts.length != 0">
-        <table class="table">
-            <thead>
-            <tr>
-              <th scope="col">Product</th>
-              <th scope="col">Price</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Lead Time</th>
-            </tr>
-            </thead>
-            <tbody>
-           <tr *ngFor="let product of selectedProducts">  
-              <td>{{ product.name }}</td>
-              <td>{{ product.sellingPrice | currency }}/{{ product.unitQuantity}}</td>
-              <td>
-                <button class="quantity-btn" (click)="decrementQuantity(product)">-</button>
-                <input class="quantity-input" type="number" [(ngModel)]="product.minQuantity">
-                <button class="quantity-btn" (click)="incrementQuantity(product)">+</button></td>
-              <td>{{ product.leadTime }}</td>
-            </tr>
-            <button class="edit-guide-btn btn btn-outline-primary" (click)="openEditGuide()">Edit guide</button>
-            <button class="btn btn-primary" (click)="placeOrder()">Place Order</button>
-            </tbody>
-          </table>
-    </ng-container>
-    <ng-container *ngIf="selectedProducts.length == 0">
-    <div class="order-guide">
-      <p>Your Menu Guides will be shown here. No menu guides added yet!</p>
-    </div>
-  </ng-container>
-  <ngb-alert [class]="isVisible" *ngIf="!closed" (close)="closed=true">Order Placed Successfully!</ngb-alert>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Lead Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of selectedProducts">
+        <td>{{ product.name }}</td>
+        <td>{{ product.sellingPrice | currency }}/{{ product.unitQuantity}}</td>
+        <td>
+          <button class="quantity-btn" (click)="decrementQuantity(product)">-</button>
+          <input class="quantity-input" type="number" [(ngModel)]="product.minQuantity">
+          <button class="quantity-btn" (click)="incrementQuantity(product)">+</button></td>
+        <td>{{ product.leadTime }}</td>
+      </tr>
+      <button class="edit-guide-btn btn btn-outline-primary" (click)="openEditGuide()">Edit guide</button>
+      <button class="btn btn-primary" (click)="placeOrder()">Place Order</button>
+    </tbody>
+  </table>
+</ng-container>
+<ng-container *ngIf="selectedProducts.length == 0">
+  <div class="order-guide">
+    <p>Your Menu Guides will be shown here. No menu guides added yet!</p>
+  </div>
+</ng-container>
+<ngb-alert [class]="isVisible" *ngIf="!closed" (close)="closed=true">Order Placed Successfully!</ngb-alert>

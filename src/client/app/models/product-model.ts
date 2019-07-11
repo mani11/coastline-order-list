@@ -5,17 +5,19 @@ export interface ProductModel {
         category: string;
         cutoff: number;
         deliveryDays:
-         { friday: boolean;
-           monday: boolean;
-           saturday: boolean;
-           thursday: boolean;
-           tuesday: boolean;
-           wednesday: boolean };
-        description:string;
+        {
+                friday: boolean;
+                monday: boolean;
+                saturday: boolean;
+                thursday: boolean;
+                tuesday: boolean;
+                wednesday: boolean
+        };
+        description: string;
         fisherId: string;
         hidden: boolean;
-        imageUrl:string;
-        leadTime:number;
+        imageUrl: string;
+        leadTime: number;
         name: string;
         productId: string;
         purchasePrice: number;

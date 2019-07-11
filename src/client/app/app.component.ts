@@ -10,14 +10,13 @@ import { ModalService } from './service/modal.service';
 })
 export class AppComponent {
   title = 'coastline-order-list';
-  //private totalAmount:number;
   constructor(
     private productService: ProductsService,
     private modalService: ModalService) { }
-   
 
-  ngOnInit(){
-    
+
+  ngOnInit() {
+
   }
   openProductList() {
     this.productService.getProducts('products');
