@@ -1,0 +1,75 @@
+@import './../variables';
+
+header{
+    padding: 1.5rem;
+    box-shadow:0 0 20px 6px #E9E9E9;
+}
+.upper-header{
+    display:flex;
+    justify-content: space-between;
+    .settings-button{
+        background: transparent;
+        border: none;
+        
+    }
+    .invoice-button{
+         background: transparent;
+        border: none;
+     }
+}
+.lower-header{
+    display:flex;
+    justify-content: space-between;
+    .coastline-nav-links{
+        ul{
+            color:$blue;
+        }
+        // ul li{
+        //     padding: 0.8rem;
+        //     border-bottom: 0.3rem solid pink;
+        //     font-size: medium;
+        // }
+    }
+    .search{
+        max-width:250px;
+    }
+}
+.contact-us-container{
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 3px #e6e6e6;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    color: $blue;
+    font-size: large;
+    font-weight: 600;
+}
+
+.coastline-content{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:'sidebar order-guide order-guide';
+    margin-top: 2rem;
+}
+.help-sidebar{
+grid-area:sidebar;
+}
+.order-guide{
+grid-area:order-guide;
+}
+.how-to-guide-btn{
+    margin-bottom: 0.5rem;
+}
+.how-to-guide-btn, .cart-btn{
+ background-color: $blue;
+ border-color:$blue;
+ border-radius:$radius;
+
+}
+.contact-btn{
+    color:$blue;
+    border-radius:$blue;
+    border-radius:$radius;
+
+}

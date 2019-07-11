@@ -1,0 +1,27 @@
+@import '../../../variables';
+
+.quantity-input{
+    max-width:3rem;
+    text-align: center;
+    border:none;
+}
+.quantity-btn{
+    background:transparent;
+    width:2rem;
+    height:2rem;
+    border-radius:1rem;
+}
+.edit-guide-btn{
+   margin-right:1rem;
+}
+
+.show{
+    visibility:visible;
+    visibility: visible;
+    padding: 0.8rem;
+    border: 1px solid $blue;
+    border-radius: 0.8rem;
+}
+.hide{
+    visibility: hidden;
+}

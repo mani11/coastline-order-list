@@ -1,0 +1,17 @@
+@import '../../../variables';
+.delete-product{
+    background: transparent;
+    border: none;
+    color: $pink;
+}
+.quantity-input{
+    max-width:3rem;
+    text-align: center;
+    border:none;
+}
+.quantity-btn{
+    background:transparent;
+    width:2rem;
+    height:2rem;
+    border-radius:1rem;
+}

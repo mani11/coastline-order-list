@@ -1,0 +1,51 @@
+<header>
+  <div class="coastline-header">
+    <div class="upper-header">
+      <div>
+      <button class="user-info btn btn-link">MB | MB's kitchen</button>
+      </div>
+      <h2>Coastline</h2>
+      <div>
+      <button class="settings-button"><i class="fas fa-sliders-h"></i>Settings</button>
+      <button class="invoice-button"><i class="far fa-file-alt"></i>Invoice</button>
+    </div>
+    </div>
+    <div class="lower-header">
+      <input type="search" class="search form-control mr-sm-2">
+      <nav class="coastline-nav-links">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link"><i class="far fa-clipboard"></i>Order Guide</a>
+          </li>
+          <li class="nav-item">
+           
+            <a class="nav-link"><i class="fas fa-shopping-bag"></i>Market</a>
+          </li>
+          <li class="nav-item">
+           
+            <a class="nav-link"><i class="fas fa-border-all"></i>Categories</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="cart-btn btn btn-primary"><i class="fas fa-shopping-cart"></i>Cart</button>
+    </div>
+  </div>
+</header>
+<div class="coastline-content">
+  <aside class="help-sidebar">
+    <div class="contact-us-container">
+      <p>Can we help?</p>
+      <div>
+      <button class="how-to-guide-btn btn btn-primary">HOW TO GUIDE</button>
+    </div>
+    <div>
+      <button class="contact-btn btn btn-outline-primary">CONTACT REP</button>
+    </div>
+    </div>
+  </aside>
+  <main class="order-guide">
+    <button class="btn btn-link" (click)="openProductList()"><i class="fas fa-folder-plus"></i>New order Guide</button>
+    <app-order-guide></app-order-guide>
+  </main>
+</div>
+<router-outlet></router-outlet>
