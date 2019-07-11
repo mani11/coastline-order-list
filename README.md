@@ -4,6 +4,8 @@ This project is a sample order guide functionality of the coastline website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 This project uses bootstrap 4.3.1, express 4.17.1,mongodb 3.2.7,
+
+Clone the project  - https://github.com/mani11/coastline-order-list.git
    
 ## Build
 
